@@ -176,6 +176,25 @@ btnLeft.addEventListener('click', () => slidePosition('previous'));
 
 //---- Image Slide ----//
 
-window.addEventListener('scroll', function (e) {
-  console.log(e);
+//---- Section animation ----//
+
+const sectionObserver = new IntersectionObserver(
+  function (entries, observe) {
+    const [entry] = entries;
+
+    if (entry.isIntersecting) {
+      entry.target.classList.remove('section--hidden');
+      sectionObserver.unobserve(entry.target);
+    }
+  },
+  {
+    root: null,
+    threshold: 0,
+  }
+);
+
+sections.forEach(mov => {
+  sectionObserver.observe(mov);
 });
+
+//---- Section animation ----//

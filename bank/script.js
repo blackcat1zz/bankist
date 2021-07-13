@@ -177,6 +177,7 @@ btnLeft.addEventListener('click', () => slidePosition('previous'));
 //---- Image Slide ----//
 
 //---- Section animation ----//
+const sections = document.querySelectorAll('.section');
 
 const sectionObserver = new IntersectionObserver(
   function (entries, observe) {

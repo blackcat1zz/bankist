@@ -675,7 +675,21 @@ h4 {
 
 .icon--up {
   position: fixed;
-  top: 80%;
-  left: 90%;
+  bottom: 100px;
+  right: 50px;
   font-size: 5rem;
+  font-size: 16px;
+}
+
+.icon--up svg{
+  height: 24px;
+  width: 24px;
+}
+
+@media (min-width: 600px) {
+  .icon--up svg{
+    height: 40px;
+    width: 40px;
+  }
+  
 }
